@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Transition Section Animation with Intersection Observer
     const observerOptions = {
-        root: null, // Observes changes in the viewport
-        threshold: 0.5, // Trigger when 50% of the target is visible
+        root: null,
+        threshold: 0.5,
         rootMargin: "0px"
     };
 
@@ -18,11 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Apply animation when the element is in view
                 animatedElement.style.opacity = '1';
                 animatedElement.style.transform = 'scale(1)';
             } else {
-                // Optional: Reset animation when the element is not in view
+                // Comment out or remove these lines if you don't want to reset the animation
                 // animatedElement.style.opacity = '0';
                 // animatedElement.style.transform = 'scale(0)';
             }
@@ -31,5 +30,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const sectionObserver = new IntersectionObserver(observerCallback, observerOptions);
     sectionObserver.observe(document.getElementById('transition-section'));
-});
 
+    // Carousel Functionality
+    const carousel = document.querySelector('#tutorials .carousel');
+    let scrollAmount = 0;
+    const cardWidth = document.querySelector('#tutorials .card').clientWidth; // Width of the card
+    const gapWidth = 20; // Gap between cards
+
+    function moveCarousel(direction) {
+        if (direction === 'right') {
+            scrollAmount += cardWidth + gapWidth;
+            carousel.scrollLeft += cardWidth + gapWidth; // Scrolls to the next card
+        } else if (direction === 'left') {
+            scrollAmount -= cardWidth + gapWidth;
+            carousel.scrollLeft -= cardWidth + gapWidth; // Scrolls to the previous card
+        }
+        // Optional: add boundaries if needed, e.g., if (scrollAmount < 0) { ... }
+    }
+
+    document.querySelector('.carousel-control.left').addEventListener('click', function() {
+        moveCarousel('left');
+    });
+    
+    document.querySelector('.carousel-control.right').addEventListener('click', function() {
+        moveCarousel('right');
+    });
+});

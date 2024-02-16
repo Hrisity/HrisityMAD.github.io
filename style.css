@@ -188,7 +188,7 @@ header {
     background-image: url('image/flowersection.png');
     background-size: cover;
     background-position: center;
-    height: 70vh; /* Adjust based on your design */
+    height: 80vh; /* Adjust based on your design */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,5 +205,77 @@ header {
 .animated-element img {
     max-width: 100%;
     height: auto;
+}
+
+#tutorials .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px; /* Space between cards */
+}
+
+#tutorials .card {
+    flex: 0 0 auto;
+    width: calc(96% - 40px); /* Full width minus padding */
+    margin: 70px; /* Matching padding from the reference */
+    padding: 30px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card shadow */
+    border-radius: 10px; /* Rounded corners for card */
+    background: #fff; /* Card background color */
+    text-align: center; /* Centering text */
+}
+
+#tutorials .card img {
+    width: 100%; /* Image fills the card width */
+    border-top-left-radius: 10px; /* Rounded corners for image */
+    border-top-right-radius: 10px;
+}
+
+#tutorials .card h3,
+#tutorials .card p {
+    padding: 0 20px; /* Padding for text */
+}
+
+#tutorials .card .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block; /* Allows for margin and width/height if needed */
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+#tutorials {
+    position: relative; /* Establishes a new positioning context for children */
+    /* ... other styles ... */
+}
+
+.carousel-control {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* Positions the arrows absolutely within #tutorials */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%);
+    z-index: 10; /* Ensures the arrows are above the other content */
+}
+
+.carousel-control.left {
+    left: 10px; /* Positions the left arrow at the left edge of #tutorials */
+}
+
+.carousel-control.right {
+    right: 10px; /* Positions the right arrow at the right edge of #tutorials */
+}
+
+@media (max-width: 768px) {
+    /* Add responsive adjustments for arrows if needed */
 }
 
