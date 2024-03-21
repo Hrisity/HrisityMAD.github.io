@@ -20,10 +20,15 @@
         </nav>
     </header>
     <section id="hero">
-        <div class="hero-content">
-            <h1>AI-Enhanced UI Design</h1>
-            <div class="intro">
-                <p>What kind of website is that? The principal aim of this project is to help UX/UI/web design/graphic design professionals and people interested in the field by giving them access to educational materials on the latest AI tools, and trends that can be implemented in design. The platform will feature tutorials, information on the latest trends, and tools that help designers improve their workflows. The structure of the website is designed to have 10 pages that cover various topics related to AI in design.</p>
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>AI-Enhanced UI Design</h1>
+                <div class="intro">
+                    <p>At AI-Enhanced UI Design, we bridge the gap between artificial intelligence and your creative vision. Dive into a world where AI tools not only streamline your workflow but also unlock new realms of possibility for your designs. Whether you're just starting out or you're a seasoned designer looking to incorporate AI into your toolkit, we've got you covered.</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/hero-section-elements.png" alt="Descriptive Text for the Image">
             </div>
         </div>
     </section> 
@@ -33,16 +38,59 @@
         </div>
     </section>   
     <section id="about">
-        <h2>About Us</h2>
-        <p>Information about the company...</p>
-    </section>
+        <div class="about-content-wrapper">
+            <h2>About</h2>
+            <div class="about-wrapper">
+                <div class="about-content">
+                <p>Welcome to Hrissy’s Project, AI-Enhanced UI Design!</p>
+        <p>Here, the future of design meets artificial intelligence. In the era of constant technological evolution, this project stands by the designers’ side. Designers who want to harmonise their creative vision with the capabilities of AI. The mission is simple - to turn AI from an enemy into a trusted ally who will open doors to new possibilities.</p>
+        <p>The idea behind this project is the belief in the power of collaboration between human creativity and artificial intelligence. On this website, you’ll find a suite of tools and resources designed to empower both budding enthusiasts and veteran designers. The treasure trove of AI-powered solutions simplifies complex tasks, offers insightful analytics, and generates innovative design elements, all tailored to complement your unique creative workflow.</p>
+        <p>Your design experience is nothing to be worried about. AI-Enhanced UI Design is designed for people with zero experience to experienced designers looking to elevate work with AI integration. We're not just about providing tools; we're about building a community where designers can learn, experiment, and grow together. By embracing AI as an ally, you unlock a world of limitless design possibilities, ensuring that your creativity knows no bounds.</p>
+    </div>
+    <div class="about-image">
+        <img src="image/about.png" alt="Descriptive alt text">
+    </div>
+</div>
+</div>
+</section>
     <section id="tutorials">
         <h2>Tutorials</h2>
         <p>Here you will explore the tutorials</p>
         <div class="carousel">
             <!-- Slide 1 -->
             <div class="card">
-                <img src="path-to-image-1.jpg" alt="Image Description 1">
+                <img src="image/ai_webdesign.jpg" alt="Image Description 1">
+                <h3>Tutorial 1</h3>
+                <p>Create a portfolio website in less than 3 hours with the help of AI tools.</p>
+                <a href="tutorial1.html" class="button">Learn More</a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="card">
+                <img src="path-to-image-2.jpg" alt="Image Description 2">
+                <h3>Title 2</h3>
+                <p>Short description of the item 2...</p>
+                <a href="link-to-page-2.html" class="button">Learn More</a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="card">
+                <img src="path-to-image-3.jpg" alt="Image Description 3">
+                <h3>Title 3</h3>
+                <p>Short description of the item 3...</p>
+                <a href="link-to-page-3.html" class="button">Learn More</a>
+            </div>
+            <!-- Additional slides... -->
+        </div>
+        <button class="carousel-control left" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-control right" onclick="moveCarousel(1)">&#10095;</button>
+    </section>
+    
+    <section id="tutorials">
+        <h2>Latest News</h2>
+        <p>Recent news...</p>
+        <div class="carousel">
+            <!-- Slide 1 -->
+            <div class="card">
+                <img src="image/ai_webdesign.jpg" alt="Image Description 1">
                 <h3>Title 1</h3>
                 <p>Short description of the item 1...</p>
                 <a href="link-to-page-1.html" class="button">Learn More</a>
@@ -66,15 +114,33 @@
         <button class="carousel-control left" onclick="moveCarousel(-1)">&#10094;</button>
         <button class="carousel-control right" onclick="moveCarousel(1)">&#10095;</button>
     </section>
-    
-    <section id="news">
-        <h2>Latest News</h2>
-        <p>Recent news...</p>
-    </section>
     <section id="tools">
-        <h2>Our Tools</h2>
-        <p>Tools we offer...</p>
+        <h2>Tools</h2>
+        <p>Introduction to some of the latest AI tools</p>
     </section>
+    <section id="photo-carousel" class="carousel">
+        <div class="carousel-slide">
+            <img src="image/thumbnail-chatgpt.jpeg" alt="Image 1">
+            <p>Introduction to ChatGPT</p>
+            <a href="chatgpt-introduction.html" class="button">Learn More</a>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/thumbnail-midjourney.jpeg" alt="Image 2">
+            <p>Introduction to Midjourney</p>
+            <a href="midjourney-introduction.html" class="button">Learn More</a>
+        </div>
+        <div class="carousel-slide">
+            <img src="image/thumbnail_framer.jpg" alt="Image 3">
+            <p>Introduction to Framer AI</p>
+            <a href="framerai-introduction.html" class="button">Learn More</a>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+    <footer>
+        <p>© 2653889. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
+</body>
 </body>
 </html>

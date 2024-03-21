@@ -21,9 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 animatedElement.style.opacity = '1';
                 animatedElement.style.transform = 'scale(1)';
             } else {
-                // Comment out or remove these lines if you don't want to reset the animation
-                // animatedElement.style.opacity = '0';
-                // animatedElement.style.transform = 'scale(0)';
+                animatedElement.style.opacity = '0';
+                animatedElement.style.transform = 'scale(0)';
             }
         });
     };
@@ -31,28 +30,60 @@ document.addEventListener('DOMContentLoaded', function () {
     const sectionObserver = new IntersectionObserver(observerCallback, observerOptions);
     sectionObserver.observe(document.getElementById('transition-section'));
 
-    // Carousel Functionality
-    const carousel = document.querySelector('#tutorials .carousel');
-    let scrollAmount = 0;
-    const cardWidth = document.querySelector('#tutorials .card').clientWidth; // Width of the card
-    const gapWidth = 20; // Gap between cards
+    // Carousel Functionality for Both Tutorials and Tools Sections
+    // Use more specific selectors for the left/right button event listeners to avoid conflicts
+    document.querySelectorAll('.carousel-control.left').forEach(button => {
+        button.addEventListener('click', function() {
+            moveCarousel(this.parentElement, 'left');
+        });
+    });
 
-    function moveCarousel(direction) {
+    document.querySelectorAll('.carousel-control.right').forEach(button => {
+        button.addEventListener('click', function() {
+            moveCarousel(this.parentElement, 'right');
+        });
+    });
+
+    function moveCarousel(carouselContainer, direction) {
+        const carousel = carouselContainer.querySelector('.carousel');
+        let scrollAmount = 0;
+        const cardWidth = carouselContainer.querySelector('.card') ? carouselContainer.querySelector('.card').clientWidth : 0;
+        const gapWidth = 20; // Assume a 20px gap for simplicity
+
         if (direction === 'right') {
             scrollAmount += cardWidth + gapWidth;
-            carousel.scrollLeft += cardWidth + gapWidth; // Scrolls to the next card
+            carousel.scrollLeft += cardWidth + gapWidth;
         } else if (direction === 'left') {
             scrollAmount -= cardWidth + gapWidth;
-            carousel.scrollLeft -= cardWidth + gapWidth; // Scrolls to the previous card
+            carousel.scrollLeft -= cardWidth + gapWidth;
         }
-        // Optional: add boundaries if needed, e.g., if (scrollAmount < 0) { ... }
     }
 
-    document.querySelector('.carousel-control.left').addEventListener('click', function() {
-        moveCarousel('left');
+    // Adjusted New Carousel Functionality for Tools Section
+    let slideIndex = 1;
+    showSlides(slideIndex); // Initialize the slideshow for the Tools section
+
+    function moveSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.querySelectorAll("#photo-carousel .carousel-slide");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slides[slideIndex-1].style.display = "block"; // Change to "flex" if your slides are flex containers
+    }
+
+    // Attaching event listeners for the next/prev buttons in the tools section carousel
+    document.querySelector('#photo-carousel .prev').addEventListener('click', function() {
+        moveSlide(-1);
     });
-    
-    document.querySelector('.carousel-control.right').addEventListener('click', function() {
-        moveCarousel('right');
+
+    document.querySelector('#photo-carousel .next').addEventListener('click', function() {
+        moveSlide(1);
     });
 });
