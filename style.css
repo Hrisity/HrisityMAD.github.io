@@ -262,7 +262,7 @@ header {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
@@ -460,6 +460,7 @@ header {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .carousel-slide {
@@ -483,6 +484,7 @@ header {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .prev, .next {
