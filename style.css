@@ -52,7 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 20px; /* 10px top and bottom padding, 20px left and right */
+    padding: 8px 20px; 
     margin-left: 99.5px;
     margin-right: 99.5px;
 }
@@ -71,7 +71,7 @@ header {
 }
 
 #logo img {
-    height: 70px; /* Adjust the size of your logo here */
+    height: 70px; /* Adjust the size of logo */
 }
 
 #nav-menu {
@@ -114,7 +114,7 @@ header {
     #nav-menu {
         position: absolute;
         right: 0;
-        top: 60px; /* Adjust this value to match the height of your header */
+        top: 60px; 
         background-color: #f8f8f8;
         width: 100%;
         display: none;
@@ -140,7 +140,7 @@ header {
     }
 }
 #hero {
-    background-image: url('image/gg.png'); /* Ensure this points to your image */
+    background-image: url('image/gg.png'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -155,7 +155,7 @@ header {
 
 
 .hero-content {
-    text-align: left; /* Center the text */
+    text-align: left; 
     max-width: 900px; /* Maximum width of the content */
     padding: 20px
     margin: 0 auto; /* Center the content container */
@@ -177,7 +177,7 @@ header {
     animation: fadeInUp 1.2s ease-out forwards;
 }
 
-/* Add media queries as necessary to adjust the layout on smaller screens */
+/* media queries to adjust the layout on smaller screens */
 
 @media (max-width: 768px) {
     #hero {
@@ -207,7 +207,7 @@ header {
     background-image: url('image/flowersection.png');
     background-size: cover;
     background-position: center;
-    height: 80vh; /* Adjust based on your design */
+    height: 80vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,20 +259,19 @@ header {
 
 #tutorials .card .button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #7B61FF;
     color: white;
     border: none;
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    display: inline-block; /* Allows for margin and width/height if needed */
+    display: inline-block; /* Allows for margin and width/height */
     margin-top: auto; /* Push the button to the bottom */
 }
 
 #tutorials {
-    position: relative; /* Establishes a new positioning context for children */
-    /* ... other styles ... */
+    position: relative; 
 }
 
 .carousel-control {
@@ -356,7 +355,7 @@ header {
     
     .item-button {
         padding: 10px 20px;
-        background-color: #8B5CF6; /* Example background color */
+        background-color: #7B61FF; 
         color: white;
         border: none;
         border-radius: 5px;
@@ -365,13 +364,13 @@ header {
     }
     
     .item-button:hover {
-        background-color: #EC4899; /* Darker shade on hover */
+        background-color: #7B61FF; /* Darker shade on hover */
     }    
 }
 
 
 @media (max-width: 768px) {
-    /* Add responsive adjustments for arrows if needed */
+   
 }
 
 /* Hero Section styling */
@@ -380,7 +379,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    text-align: center; /* Center the text for smaller screens */
+    text-align: center; 
 }
 
 .hero-wrapper {
@@ -395,15 +394,15 @@ header {
 
 @media (min-width: 768px) {
     #hero {
-        text-align: left; /* Aligns text to the left when flex-direction is row */
+        text-align: left; 
     }
     .hero-wrapper {
         flex-direction: row;
         justify-content: space-between; /* Distributes space between items */
     }
     .hero-content, .hero-image {
-        flex: 1; /* Allows the children to share the available space */
-        padding: 20px; /* Adds padding to ensure some space around items */
+        flex: 1; 
+        padding: 20px; 
     }
 }
 
@@ -411,16 +410,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0; /* Adjust as needed */
+    padding: 20px 0; 
 }
 
 .about-content {
     flex: 1;
-    padding-right: 20px; /* Ensures spacing between text and image */
+    padding-right: 20px; 
 }
 
 .about-image {
-    flex-basis: 40%; /* Adjust based on your preference */
+    flex-basis: 40%; 
 }
 
 .about-image img {
@@ -440,11 +439,11 @@ header {
     }
 
     .about-image {
-        margin-top: 20px; /* Adds spacing between text and image on smaller screens */
+        margin-top: 20px; 
     }
 }
 
-/* Styles for the hero image and hover effect */
+
 .hero-image img {
     width: 70%; /* Ensure the image is responsive and fits its container */
     height: auto; /* Maintain the aspect ratio of the image */
@@ -479,7 +478,7 @@ header {
 .button {
     padding: 10px;
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: #7B61FF;
     color: white;
     text-decoration: none;
     border: none;
