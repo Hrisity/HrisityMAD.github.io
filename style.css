@@ -456,7 +456,7 @@ header {
 
 .carousel {
     position: relative;
-    max-width: 600px;
+    max-width: 1180px;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
