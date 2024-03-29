@@ -6,6 +6,11 @@ body, html {
     font-family: 'Arial', sans-serif; /* Update font-family as per original design */
 }
 
+h1, h2, h3, h4, h5 {
+    color: #333;
+    font-family: Georgia, serif;
+}
+
 a {
     text-decoration: none;
     color: #007bff; /* Update link color as per original design */
@@ -149,4 +154,26 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 8px; /* Optional: for rounded corners */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #f3f3f3;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+section {
+    padding-bottom: 30px; 
 }
